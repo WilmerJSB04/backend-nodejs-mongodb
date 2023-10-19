@@ -32,4 +32,4 @@ async function getAttributos(arrayDeObjetos) {
     return atributosRepetidos;
 }
 
-module.exports = {forEachErrors, resolveObj}
+module.exports = {resolveObj}

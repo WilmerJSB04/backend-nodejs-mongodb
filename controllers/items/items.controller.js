@@ -1,9 +1,8 @@
-// Ejemplo de un controlador (countries.controller.js)
 const express = require('express');
 const router = express.Router();
+const authGuard = require('../../middleware/auth')
 
-// Define rutas y maneja las solicitudes
-router.get('', (req, res) => {
+router.get('', authGuard, (req, res) => {
     try {
         return res.status(200).json({ success: true, message: 'Items Obtenidos', data: [] });
     } catch (error) {
